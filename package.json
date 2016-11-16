@@ -1,0 +1,18 @@
+{
+  "name": "@byndyusoft/molecules",
+  "version": "0.0.0",
+  "description": "UI components library. Work in progress.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byndyusoft/ui.molecules.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/byndyusoft/ui.molecules/issues"
+  },
+  "homepage": "https://github.com/byndyusoft/ui.molecules#readme"
+}
