@@ -23,6 +23,18 @@
     "eol-last": 1,
     "indent": [2, 4],
     "linebreak-style": 0,
-    "no-console": 1
+    "max-len": 0,
+    "no-confusing-arrow": 0,
+    "no-console": 1,
+    "no-empty": [2, { "allowEmptyCatch": true }],
+    "no-unused-expressions": [2, { "allowShortCircuit": true }],
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "jsx-a11y/no-static-element-interactions": 0,
+    "react/jsx-indent": [2, 4],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-space-before-closing": 1,
+    "react/prefer-stateless-function": 1,
+    "react/prop-types": [1, { "ignore": ["location"] }],
+    "react/sort-comp": 0
   }
 }
