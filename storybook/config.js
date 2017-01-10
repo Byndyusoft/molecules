@@ -1,4 +1,5 @@
 import { configure } from '@kadira/storybook';
+import './styles.css';
 
 const req = require.context('../src', true, /stories.js$/);
 
