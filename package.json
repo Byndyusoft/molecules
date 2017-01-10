@@ -5,7 +5,10 @@
   "main": "src/index.js",
   "scripts": {
     "start": "start-storybook -p 9001 -c storybook",
-    "test": "mocha src/**/tests.js --reporter spec --require tests.setup.js"
+    "test": "mocha src/**/tests.js --reporter spec --require tests.setup.js",
+    "lint:js": "eslint src --ext .js",
+    "lint:css": "stylelint src/**/*.css",
+    "lint": "npm run lint:js && npm run lint:css"
   },
   "repository": {
     "type": "git",
