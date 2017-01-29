@@ -1,0 +1,13 @@
+.button {
+    position: relative;
+    display: inline-block;
+    border-style: solid;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    overflow: visible;
+    transition: all 0.2s linear;
+}

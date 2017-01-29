@@ -1,0 +1,39 @@
+/* sizes */
+.xl {
+    font-size: 2em;
+}
+
+.lg {
+    font-size: 1.5em;
+}
+
+.md {
+    font-size: 1em;
+}
+
+.sm {
+    font-size: 0.75em;
+}
+
+.xs {
+    font-size: 0.5em;
+}
+
+/* themes */
+.primary {
+
+}
+
+.success {
+
+}
+
+.warning {
+
+}
+
+.danger {
+
+}
+
+/* variants */
