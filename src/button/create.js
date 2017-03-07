@@ -36,7 +36,7 @@ export default function ({ sizes, styles, themes, variants }) {
     };
 
     const Button = props => {
-        const classNames = [basicStyles.button, props.className];
+        const classNames = [basicStyles.button, styles.button, props.className];
 
         if (props.pending) {
             classNames.push(basicStyles.pending);

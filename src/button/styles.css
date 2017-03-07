@@ -2,7 +2,8 @@
     position: relative;
     display: inline-block;
     border-style: solid;
-    vertical-align: middle;
+    background: transparent;
+    vertical-align: top;
     text-align: center;
     text-decoration: none;
     white-space: nowrap;

@@ -1,22 +1,41 @@
+@import "../../styles/palette.css";
+
+/* basic */
+.button {
+    border-width: 1px;
+    border-color: var(--gray-3);
+    border-radius: 0.25em;
+    line-height: 1;
+
+    &:focus {
+        outline: none;
+    }
+}
+
 /* sizes */
 .xl {
-    font-size: 2em;
+    font-size: 24px;
+    padding: 10px 24px 12px;
 }
 
 .lg {
-    font-size: 1.5em;
+    font-size: 20px;
+    padding: 8px 20px 10px;
 }
 
 .md {
-    font-size: 1em;
+    font-size: 16px;
+    padding: 6px 16px 8px;
 }
 
 .sm {
-    font-size: 0.75em;
+    font-size: 12px;
+    padding: 4px 12px 6px;
 }
 
 .xs {
-    font-size: 0.5em;
+    font-size: 8px;
+    padding: 2px 8px 4px;
 }
 
 /* themes */
