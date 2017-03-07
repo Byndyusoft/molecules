@@ -2,7 +2,7 @@ module.exports = {
     module: {
         loaders: [{
             test: /\.css$/,
-            loaders: ['style', 'css?modules&localIdentName=[name]__[hash:base64:5]', 'postcss']
+            loaders: ['style', 'css?modules&localIdentName=[folder]--[local]__[hash:base64:5]', 'postcss']
         }, {
             test: /\.(png|svg)$/,
             loader: 'file?name=img/[name].[ext]'
