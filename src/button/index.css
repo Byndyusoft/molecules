@@ -57,6 +57,10 @@
         background-color: var(--red-8);
     }
 
+    &:focus {
+        box-shadow: 0 0 0 3px var(--red-2);
+    }
+
     &,
     &.disabled,
     &.pending {
@@ -74,6 +78,10 @@
 
     &:active {
         background-color: var(--pink-8);
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 3px var(--pink-2);
     }
 
     &,
@@ -95,6 +103,10 @@
         background-color: var(--grape-8);
     }
 
+    &:focus {
+        box-shadow: 0 0 0 3px var(--grape-2);
+    }
+
     &,
     &.disabled,
     &.pending {
@@ -112,6 +124,10 @@
 
     &:active {
         background-color: var(--violet-8);
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 3px var(--violet-2);
     }
 
     &,
@@ -133,6 +149,10 @@
         background-color: var(--indigo-8);
     }
 
+    &:focus {
+        box-shadow: 0 0 0 3px var(--indigo-2);
+    }
+
     &,
     &.disabled,
     &.pending {
@@ -150,6 +170,10 @@
 
     &:active {
         background-color: var(--blue-8);
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 3px var(--blue-2);
     }
 
     &,
@@ -171,6 +195,10 @@
         background-color: var(--cyan-8);
     }
 
+    &:focus {
+        box-shadow: 0 0 0 3px var(--cyan-2);
+    }
+
     &,
     &.disabled,
     &.pending {
@@ -188,6 +216,10 @@
 
     &:active {
         background-color: var(--teal-8);
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 3px var(--teal-2);
     }
 
     &,
@@ -209,6 +241,10 @@
         background-color: var(--green-8);
     }
 
+    &:focus {
+        box-shadow: 0 0 0 3px var(--green-2);
+    }
+
     &,
     &.disabled,
     &.pending {
@@ -226,6 +262,10 @@
 
     &:active {
         background-color: var(--lime-8);
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 3px var(--lime-2);
     }
 
     &,
@@ -247,6 +287,10 @@
         background-color: var(--yellow-8);
     }
 
+    &:focus {
+        box-shadow: 0 0 0 3px var(--yellow-2);
+    }
+
     &,
     &.disabled,
     &.pending {
@@ -264,6 +308,10 @@
 
     &:active {
         background-color: var(--orange-8);
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 3px var(--orange-2);
     }
 
     &,
