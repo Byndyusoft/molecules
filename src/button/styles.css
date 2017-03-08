@@ -10,5 +10,5 @@
     cursor: pointer;
     user-select: none;
     overflow: visible;
-    transition: all 0.2s linear;
+    transition: all 0.1s linear;
 }

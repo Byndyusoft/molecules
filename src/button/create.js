@@ -39,13 +39,17 @@ export default function ({ sizes, styles, themes, variants }) {
         const classNames = [basicStyles.button, styles.button, props.className];
 
         if (props.pending) {
-            classNames.push(basicStyles.pending);
+            classNames.push(styles.pending);
+        }
+
+        if (props.disabled) {
+            classNames.push(styles.disabled);
         }
 
         const disabled = props.disabled || props.pending;
 
         if (!!props.href && disabled) {
-            classNames.push(basicStyles.disabled);
+            classNames.push(styles.disabled);
         }
 
         if (props.size) {

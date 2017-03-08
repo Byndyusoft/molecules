@@ -10,6 +10,12 @@
     &:focus {
         outline: none;
     }
+
+    &.disabled,
+    &.pending {
+        opacity: 0.7;
+        cursor: default;
+    }
 }
 
 /* sizes */
@@ -39,20 +45,232 @@
 }
 
 /* themes */
-.primary {
+.red {
+    border-color: var(--red-9);
+    color: var(--white);
 
+    &:hover {
+        background-color: var(--red-7);
+    }
+
+    &:active {
+        background-color: var(--red-8);
+    }
+
+    &,
+    &.disabled,
+    &.pending {
+        background-color: var(--red-6);
+    }
 }
 
-.success {
+.pink {
+    border-color: var(--pink-9);
+    color: var(--white);
 
+    &:hover {
+        background-color: var(--pink-7);
+    }
+
+    &:active {
+        background-color: var(--pink-8);
+    }
+
+    &,
+    &.disabled,
+    &.pending {
+        background-color: var(--pink-6);
+    }
 }
 
-.warning {
+.grape {
+    border-color: var(--grape-9);
+    color: var(--white);
 
+    &:hover {
+        background-color: var(--grape-7);
+    }
+
+    &:active {
+        background-color: var(--grape-8);
+    }
+
+    &,
+    &.disabled,
+    &.pending {
+        background-color: var(--grape-6);
+    }
 }
 
-.danger {
+.violet {
+    border-color: var(--violet-9);
+    color: var(--white);
 
+    &:hover {
+        background-color: var(--violet-7);
+    }
+
+    &:active {
+        background-color: var(--violet-8);
+    }
+
+    &,
+    &.disabled,
+    &.pending {
+        background-color: var(--violet-6);
+    }
+}
+
+.indigo {
+    border-color: var(--indigo-9);
+    color: var(--white);
+
+    &:hover {
+        background-color: var(--indigo-7);
+    }
+
+    &:active {
+        background-color: var(--indigo-8);
+    }
+
+    &,
+    &.disabled,
+    &.pending {
+        background-color: var(--indigo-6);
+    }
+}
+
+.blue {
+    border-color: var(--blue-9);
+    color: var(--white);
+
+    &:hover {
+        background-color: var(--blue-7);
+    }
+
+    &:active {
+        background-color: var(--blue-8);
+    }
+
+    &,
+    &.disabled,
+    &.pending {
+        background-color: var(--blue-6);
+    }
+}
+
+.cyan {
+    border-color: var(--cyan-9);
+    color: var(--white);
+
+    &:hover {
+        background-color: var(--cyan-7);
+    }
+
+    &:active {
+        background-color: var(--cyan-8);
+    }
+
+    &,
+    &.disabled,
+    &.pending {
+        background-color: var(--cyan-6);
+    }
+}
+
+.teal {
+    border-color: var(--teal-9);
+    color: var(--white);
+
+    &:hover {
+        background-color: var(--teal-7);
+    }
+
+    &:active {
+        background-color: var(--teal-8);
+    }
+
+    &,
+    &.disabled,
+    &.pending {
+        background-color: var(--teal-6);
+    }
+}
+
+.green {
+    border-color: var(--green-9);
+    color: var(--white);
+
+    &:hover {
+        background-color: var(--green-7);
+    }
+
+    &:active {
+        background-color: var(--green-8);
+    }
+
+    &,
+    &.disabled,
+    &.pending {
+        background-color: var(--green-6);
+    }
+}
+
+.lime {
+    border-color: var(--lime-9);
+    color: var(--white);
+
+    &:hover {
+        background-color: var(--lime-7);
+    }
+
+    &:active {
+        background-color: var(--lime-8);
+    }
+
+    &,
+    &.disabled,
+    &.pending {
+        background-color: var(--lime-6);
+    }
+}
+
+.yellow {
+    border-color: var(--yellow-9);
+    color: var(--white);
+
+    &:hover {
+        background-color: var(--yellow-7);
+    }
+
+    &:active {
+        background-color: var(--yellow-8);
+    }
+
+    &,
+    &.disabled,
+    &.pending {
+        background-color: var(--yellow-6);
+    }
+}
+
+.orange {
+    border-color: var(--orange-9);
+    color: var(--white);
+
+    &:hover {
+        background-color: var(--orange-7);
+    }
+
+    &:active {
+        background-color: var(--orange-8);
+    }
+
+    &,
+    &.disabled,
+    &.pending {
+        background-color: var(--orange-6);
+    }
 }
 
 /* variants */
