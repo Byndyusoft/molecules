@@ -3,16 +3,27 @@
 /* basic */
 .button {
     border-width: 1px;
-    border-color: var(--gray-3);
+    border-color: var(--gray-5);
     border-radius: 0.25em;
+    background-color: var(--gray-2);
     line-height: 1;
 
+    &:hover {
+        background-color: var(--gray-3);
+    }
+
+    &:active {
+        background-color: var(--gray-4);
+    }
+
     &:focus {
+        box-shadow: 0 0 0 3px var(--gray-1);
         outline: none;
     }
 
-    &.disabled,
-    &.pending {
+    &.isDisabled,
+    &.isPending {
+        background-color: var(--gray-2);
         opacity: 0.7;
         cursor: default;
     }
@@ -62,8 +73,8 @@
     }
 
     &,
-    &.disabled,
-    &.pending {
+    &.isDisabled,
+    &.isPending {
         background-color: var(--red-6);
     }
 }
@@ -85,8 +96,8 @@
     }
 
     &,
-    &.disabled,
-    &.pending {
+    &.isDisabled,
+    &.isPending {
         background-color: var(--pink-6);
     }
 }
@@ -108,8 +119,8 @@
     }
 
     &,
-    &.disabled,
-    &.pending {
+    &.isDisabled,
+    &.isPending {
         background-color: var(--grape-6);
     }
 }
@@ -131,8 +142,8 @@
     }
 
     &,
-    &.disabled,
-    &.pending {
+    &.isDisabled,
+    &.isPending {
         background-color: var(--violet-6);
     }
 }
@@ -154,8 +165,8 @@
     }
 
     &,
-    &.disabled,
-    &.pending {
+    &.isDisabled,
+    &.isPending {
         background-color: var(--indigo-6);
     }
 }
@@ -177,8 +188,8 @@
     }
 
     &,
-    &.disabled,
-    &.pending {
+    &.isDisabled,
+    &.isPending {
         background-color: var(--blue-6);
     }
 }
@@ -200,8 +211,8 @@
     }
 
     &,
-    &.disabled,
-    &.pending {
+    &.isDisabled,
+    &.isPending {
         background-color: var(--cyan-6);
     }
 }
@@ -223,8 +234,8 @@
     }
 
     &,
-    &.disabled,
-    &.pending {
+    &.isDisabled,
+    &.isPending {
         background-color: var(--teal-6);
     }
 }
@@ -246,8 +257,8 @@
     }
 
     &,
-    &.disabled,
-    &.pending {
+    &.isDisabled,
+    &.isPending {
         background-color: var(--green-6);
     }
 }
@@ -269,8 +280,8 @@
     }
 
     &,
-    &.disabled,
-    &.pending {
+    &.isDisabled,
+    &.isPending {
         background-color: var(--lime-6);
     }
 }
@@ -292,8 +303,8 @@
     }
 
     &,
-    &.disabled,
-    &.pending {
+    &.isDisabled,
+    &.isPending {
         background-color: var(--yellow-6);
     }
 }
@@ -315,8 +326,8 @@
     }
 
     &,
-    &.disabled,
-    &.pending {
+    &.isDisabled,
+    &.isPending {
         background-color: var(--orange-6);
     }
 }

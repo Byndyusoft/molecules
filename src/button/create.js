@@ -20,9 +20,9 @@ export default function ({ sizes, styles, themes, variants }) {
     }
 
     const Link = props => {
-        const { children, className, disabled, href, target } = props;
+        const { children, className, isDisabled, href, target } = props;
 
-        return disabled
+        return isDisabled
             ? <span className={className} role="button">{children}</span>
             : <a className={className} href={href} role="button" target={target}>{children}</a>;
     };
@@ -30,57 +30,42 @@ export default function ({ sizes, styles, themes, variants }) {
     Link.propTypes = {
         children: node.isRequired,
         className: string,
-        disabled: bool,
+        isDisabled: bool,
         href: string,
         target: string
     };
 
     const Button = props => {
-        const classNames = [basicStyles.button, styles.button, props.className];
+        const classNames = cls(
+            basicStyles.button,
+            styles.button,
+            props.className,
+            { [styles.isPending]: props.isPending },
+            { [styles.isDisabled]: props.isDisabled },
+            { [styles[props.size]]: props.size },
+            { [styles[props.variant]]: props.variant },
+            { [styles[props.theme]]: props.theme }
+        );
 
-        if (props.pending) {
-            classNames.push(styles.pending);
-        }
-
-        if (props.disabled) {
-            classNames.push(styles.disabled);
-        }
-
-        const disabled = props.disabled || props.pending;
-
-        if (!!props.href && disabled) {
-            classNames.push(styles.disabled);
-        }
-
-        if (props.size) {
-            classNames.push(styles[props.size]);
-        }
-
-        if (props.variant) {
-            classNames.push(styles[props.variant]);
-        }
-
-        if (props.theme) {
-            classNames.push(styles[props.theme]);
-        }
-
-        const className = cls(...classNames);
+        const isDisabled = props.isPending || props.isDisabled;
 
         return props.href.length !== 0
-            ? <Link onClick={props.onClick} className={className} href={props.href} disabled={disabled}>{ props.children }</Link>
-            : <button onClick={props.onClick} className={className} disabled={disabled}>{ props.children }</button>;
+            ? <Link onClick={props.onClick} className={classNames} href={props.href} isDisabled={isDisabled}>{ props.children }</Link>
+            : <button type={props.type} onClick={props.onClick} className={classNames} disabled={isDisabled}>{ props.children }</button>;
     };
 
     Button.propTypes = {
         ...propTypes,
         ...Link.propTypes,
-        pending: bool
+        type: oneOf(['button', 'submit', 'reset']),
+        isPending: bool
     };
 
     Button.defaultProps = {
-        disabled: false,
         href: '',
-        pending: false
+        type: 'button',
+        isDisabled: false,
+        isPending: false
     };
 
     return Button;

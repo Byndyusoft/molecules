@@ -52,15 +52,15 @@ stories.add('Themes and states', () => {
                 <tr>
                     <td>Default</td>
                     <td><Button size="md">{ text }</Button></td>
-                    <td><Button size="md" disabled>{ text }</Button></td>
-                    <td><Button size="md" pending>{ text }</Button></td>
+                    <td><Button size="md" isDisabled>{ text }</Button></td>
+                    <td><Button size="md" isPending>{ text }</Button></td>
                 </tr>
                 { colors.map((color, i) => (
                     <tr key={`row-themes-${i}`}>
                         <td>{ color }</td>
                         <td><Button size="md" theme={color.toLowerCase()}>{ text }</Button></td>
-                        <td><Button size="md" theme={color.toLowerCase()} disabled>{ text }</Button></td>
-                        <td><Button size="md" theme={color.toLowerCase()} pending>{ text }</Button></td>
+                        <td><Button size="md" theme={color.toLowerCase()} isDisabled>{ text }</Button></td>
+                        <td><Button size="md" theme={color.toLowerCase()} isPending>{ text }</Button></td>
                     </tr>
                 )) }
             </tbody>
