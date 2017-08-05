@@ -7,8 +7,9 @@
     display: inline-block;
     border: none;
     border-radius: 0.25em;
-    padding: 0.5em 1em;
+    padding: 0.5em 1.5em;
     background-color: var(--default-base-color);
+    color: inherit;
     vertical-align: top;
     text-align: center;
     text-decoration: none;
@@ -64,8 +65,13 @@
         }
     }
 
-    &.rounded {
-        border-radius: 1em;
+    &.outline {
+        color: var(--default-base-color);
+        box-shadow: inset 0 0 0 1px var(--default-base-color);
+
+        &:hover {
+            color: inherit;
+        }
     }
 }
 
@@ -103,6 +109,15 @@
     &.isPending {
         background-color: color(var(--danger-base-color) a(0.7));
     }
+
+    &.outline {
+        color: var(--danger-base-color);
+        box-shadow: inset 0 0 0 1px var(--danger-base-color);
+
+        &:hover {
+            color: var(--white);
+        }
+    }
 }
 
 .primary {
@@ -124,6 +139,15 @@
     &.isDisabled,
     &.isPending {
         background-color: color(var(--primary-base-color) a(0.7));
+    }
+
+    &.outline {
+        color: var(--primary-base-color);
+        box-shadow: inset 0 0 0 1px var(--primary-base-color);
+
+        &:hover {
+            color: var(--white);
+        }
     }
 }
 
@@ -147,6 +171,15 @@
     &.isPending {
         background-color: color(var(--info-base-color) a(0.7));
     }
+
+    &.outline {
+        color: var(--info-base-color);
+        box-shadow: inset 0 0 0 1px var(--info-base-color);
+
+        &:hover {
+            color: var(--white);
+        }
+    }
 }
 
 .success {
@@ -168,6 +201,15 @@
     &.isDisabled,
     &.isPending {
         background-color: color(var(--success-base-color) a(0.7));
+    }
+
+    &.outline {
+        color: var(--success-base-color);
+        box-shadow: inset 0 0 0 1px var(--success-base-color);
+
+        &:hover {
+            color: var(--white);
+        }
     }
 }
 
@@ -191,6 +233,15 @@
     &.isPending {
         background-color: color(var(--warning-base-color) a(0.7));
     }
+
+    &.outline {
+        color: var(--warning-base-color);
+        box-shadow: inset 0 0 0 1px var(--warning-base-color);
+
+        &:hover {
+            color: var(--white);
+        }
+    }
 }
 
 .inverse {
@@ -213,6 +264,22 @@
     &.isPending {
         background-color: color(var(--inverse-base-color) a(0.7));
     }
+
+    &.outline {
+        color: var(--inverse-base-color);
+        box-shadow: inset 0 0 0 1px var(--inverse-base-color);
+
+        &:hover {
+            color: var(--white);
+        }
+    }
 }
 
 /* variants */
+.outline {
+    background-color: transparent;
+}
+
+.rounded {
+    border-radius: 1em;
+}
