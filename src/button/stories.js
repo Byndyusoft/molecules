@@ -4,7 +4,7 @@ import { withKnobs } from '@kadira/storybook-addon-knobs';
 import styles from '../../storybook/table.css';
 import Button from '.';
 
-const colors = ['Red', 'Pink', 'Grape', 'Violet', 'Indigo', 'Blue', 'Cyan', 'Teal', 'Green', 'Lime', 'Yellow', 'Orange'];
+const colors = ['primary', 'success', 'info', 'danger', 'warning', 'inverse'];
 const stories = storiesOf('Button', module);
 stories.addDecorator(withKnobs);
 
@@ -15,20 +15,16 @@ stories.add('Basic', () => {
         <table className={styles.table}>
             <thead>
                 <tr>
-                    <th>XS</th>
                     <th>SM</th>
                     <th>MD</th>
                     <th>LG</th>
-                    <th>XL</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><Button size="xs">{ text }</Button></td>
                     <td><Button size="sm">{ text }</Button></td>
                     <td><Button size="md">{ text }</Button></td>
                     <td><Button size="lg">{ text }</Button></td>
-                    <td><Button size="xl">{ text }</Button></td>
                 </tr>
             </tbody>
         </table>
@@ -43,14 +39,14 @@ stories.add('Themes and states', () => {
             <thead>
                 <tr>
                     <th />
-                    <th>Default</th>
-                    <th>Disabled</th>
-                    <th>Pending</th>
+                    <th>default</th>
+                    <th>disabled</th>
+                    <th>pending</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Default</td>
+                    <td>default</td>
                     <td><Button size="md">{ text }</Button></td>
                     <td><Button size="md" isDisabled>{ text }</Button></td>
                     <td><Button size="md" isPending>{ text }</Button></td>
@@ -58,9 +54,9 @@ stories.add('Themes and states', () => {
                 { colors.map((color, i) => (
                     <tr key={`row-themes-${i}`}>
                         <td>{ color }</td>
-                        <td><Button size="md" theme={color.toLowerCase()}>{ text }</Button></td>
-                        <td><Button size="md" theme={color.toLowerCase()} isDisabled>{ text }</Button></td>
-                        <td><Button size="md" theme={color.toLowerCase()} isPending>{ text }</Button></td>
+                        <td><Button size="md" theme={color}>{ text }</Button></td>
+                        <td><Button size="md" theme={color} isDisabled>{ text }</Button></td>
+                        <td><Button size="md" theme={color} isPending>{ text }</Button></td>
                     </tr>
                 )) }
             </tbody>

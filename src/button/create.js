@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react';
 import cls from 'classnames';
-import basicStyles from './styles.css';
 
 const { bool, node, oneOf, string } = PropTypes;
 
@@ -37,7 +36,6 @@ export default function ({ sizes, styles, themes, variants }) {
 
     const Button = props => {
         const classNames = cls(
-            basicStyles.button,
             styles.button,
             props.className,
             { [styles.isPending]: props.isPending },
