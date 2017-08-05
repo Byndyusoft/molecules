@@ -1,7 +1,7 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import { bool, node, oneOf, string } from 'prop-types';
 import cls from 'classnames';
 
-const { bool, node, oneOf, string } = PropTypes;
 
 export default function ({ sizes, styles = {}, themes, variants }) {
     const propTypes = {};

@@ -1,4 +1,4 @@
-import { configure, addDecorator } from '@kadira/storybook';
+import { configure, addDecorator } from '@storybook/react';
 import container from './container';
 import './styles.css';
 
