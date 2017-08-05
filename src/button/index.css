@@ -63,6 +63,10 @@
             display: block;
         }
     }
+
+    &.rounded {
+        border-radius: 1em;
+    }
 }
 
 /* sizes */

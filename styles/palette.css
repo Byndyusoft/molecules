@@ -25,9 +25,9 @@
     --danger-dark-color: var(--red-8);
 
     /* warning */
-    --warning-base-color: var(--orange-7);
-    --warning-light-color: var(--orange-6);
-    --warning-dark-color: var(--orange-8);
+    --warning-base-color: var(--yellow-7);
+    --warning-light-color: var(--yellow-6);
+    --warning-dark-color: var(--yellow-8);
 
     /* info */
     --info-base-color: var(--teal-7);

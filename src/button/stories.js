@@ -63,3 +63,36 @@ stories.add('Themes and states', () => {
         </table>
     );
 });
+
+stories.add('Variants', () => {
+    const text = 'Button';
+
+    return (
+        <table className={styles.table}>
+            <thead>
+                <tr>
+                    <th />
+                    <th>default</th>
+                    <th>outline</th>
+                    <th>rounded</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>default</td>
+                    <td><Button size="md">{ text }</Button></td>
+                    <td><Button size="md" variant="outline">{ text }</Button></td>
+                    <td><Button size="md" variant="rounded">{ text }</Button></td>
+                </tr>
+                { colors.map((color, i) => (
+                    <tr key={`row-themes-${i}`}>
+                        <td>{ color }</td>
+                        <td><Button size="md" theme={color}>{ text }</Button></td>
+                        <td><Button size="md" theme={color} variant="outline">{ text }</Button></td>
+                        <td><Button size="md" theme={color} variant="rounded">{ text }</Button></td>
+                    </tr>
+                )) }
+            </tbody>
+        </table>
+    );
+});
