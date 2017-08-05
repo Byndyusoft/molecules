@@ -1,4 +1,5 @@
-import { configure } from '@kadira/storybook';
+import { configure, addDecorator } from '@kadira/storybook';
+import container from './container';
 import './styles.css';
 
 const req = require.context('../src', true, /stories.js$/);
@@ -9,4 +10,5 @@ function loadStories() {
 }
 /* eslint-enable global-require */
 
+addDecorator(container);
 configure(loadStories, module);

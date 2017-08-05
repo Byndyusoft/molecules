@@ -1,0 +1,285 @@
+@import "../../styles/palette.css";
+@import "../../styles/animations.css";
+
+/* basic */
+.button {
+    position: relative;
+    display: inline-block;
+    border: none;
+    border-radius: 0.25em;
+    padding: 0.5em 1.5em;
+    background-color: var(--default-base-color);
+    color: inherit;
+    vertical-align: top;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    overflow: visible;
+    transition: all 0.1s linear;
+
+    &:hover {
+        background-color: var(--default-light-color);
+    }
+
+    &:active {
+        background-color: var(--default-dark-color);
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 3px color(var(--default-base-color) a(0.2));
+        outline: none;
+    }
+
+    &::after {
+        position: absolute;
+        display: none;
+        top: 50%;
+        left: 50%;
+        content: "";
+        width: 1.5em;
+        height: 1.5em;
+        border: 2px solid var(--white);
+        border-top-color: transparent;
+        margin-top: -0.75em;
+        margin-left: -0.75em;
+        border-radius: 50%;
+        animation: spin 1s infinite linear;
+    }
+
+    &.isDisabled,
+    &.isPending {
+        background-color: color(var(--default-base-color) a(0.7));
+        cursor: default;
+    }
+
+    &.isPending {
+        span {
+            visibility: hidden;
+        }
+
+        &::after {
+            display: block;
+        }
+    }
+
+    &.outline {
+        color: var(--default-base-color);
+        box-shadow: inset 0 0 0 1px var(--default-base-color);
+
+        &:hover {
+            color: inherit;
+        }
+    }
+}
+
+/* sizes */
+.sm {
+    font-size: 0.75rem;
+}
+
+.md {
+    font-size: 1rem;
+}
+
+.lg {
+    font-size: 1.5rem;
+}
+
+/* themes */
+.danger {
+    color: var(--white);
+    background-color: var(--danger-base-color);
+
+    &:hover {
+        background-color: var(--danger-light-color);
+    }
+
+    &:active {
+        background-color: var(--danger-dark-color);
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 3px color(var(--danger-base-color) a(0.2));
+    }
+
+    &.isDisabled,
+    &.isPending {
+        background-color: color(var(--danger-base-color) a(0.7));
+    }
+
+    &.outline {
+        color: var(--danger-base-color);
+        box-shadow: inset 0 0 0 1px var(--danger-base-color);
+
+        &:hover {
+            color: var(--white);
+        }
+    }
+}
+
+.primary {
+    color: var(--white);
+    background-color: var(--primary-base-color);
+
+    &:hover {
+        background-color: var(--primary-light-color);
+    }
+
+    &:active {
+        background-color: var(--primary-dark-color);
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 3px color(var(--primary-base-color) a(0.2));
+    }
+
+    &.isDisabled,
+    &.isPending {
+        background-color: color(var(--primary-base-color) a(0.7));
+    }
+
+    &.outline {
+        color: var(--primary-base-color);
+        box-shadow: inset 0 0 0 1px var(--primary-base-color);
+
+        &:hover {
+            color: var(--white);
+        }
+    }
+}
+
+.info {
+    color: var(--white);
+    background-color: var(--info-base-color);
+
+    &:hover {
+        background-color: var(--info-light-color);
+    }
+
+    &:active {
+        background-color: var(--info-dark-color);
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 3px color(var(--info-base-color) a(0.2));
+    }
+
+    &.isDisabled,
+    &.isPending {
+        background-color: color(var(--info-base-color) a(0.7));
+    }
+
+    &.outline {
+        color: var(--info-base-color);
+        box-shadow: inset 0 0 0 1px var(--info-base-color);
+
+        &:hover {
+            color: var(--white);
+        }
+    }
+}
+
+.success {
+    color: var(--white);
+    background-color: var(--success-base-color);
+
+    &:hover {
+        background-color: var(--success-light-color);
+    }
+
+    &:active {
+        background-color: var(--success-dark-color);
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 3px color(var(--success-base-color) a(0.2));
+    }
+
+    &.isDisabled,
+    &.isPending {
+        background-color: color(var(--success-base-color) a(0.7));
+    }
+
+    &.outline {
+        color: var(--success-base-color);
+        box-shadow: inset 0 0 0 1px var(--success-base-color);
+
+        &:hover {
+            color: var(--white);
+        }
+    }
+}
+
+.warning {
+    color: var(--white);
+    background-color: var(--warning-base-color);
+
+    &:hover {
+        background-color: var(--warning-light-color);
+    }
+
+    &:active {
+        background-color: var(--warning-dark-color);
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 3px color(var(--warning-base-color) a(0.2));
+    }
+
+    &.isDisabled,
+    &.isPending {
+        background-color: color(var(--warning-base-color) a(0.7));
+    }
+
+    &.outline {
+        color: var(--warning-base-color);
+        box-shadow: inset 0 0 0 1px var(--warning-base-color);
+
+        &:hover {
+            color: var(--white);
+        }
+    }
+}
+
+.inverse {
+    color: var(--white);
+    background-color: var(--inverse-base-color);
+
+    &:hover {
+        background-color: var(--inverse-light-color);
+    }
+
+    &:active {
+        background-color: var(--inverse-dark-color);
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 3px color(var(--inverse-base-color) a(0.2));
+    }
+
+    &.isDisabled,
+    &.isPending {
+        background-color: color(var(--inverse-base-color) a(0.7));
+    }
+
+    &.outline {
+        color: var(--inverse-base-color);
+        box-shadow: inset 0 0 0 1px var(--inverse-base-color);
+
+        &:hover {
+            color: var(--white);
+        }
+    }
+}
+
+/* variants */
+.outline {
+    background-color: transparent;
+}
+
+.rounded {
+    border-radius: 1em;
+}

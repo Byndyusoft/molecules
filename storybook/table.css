@@ -1,0 +1,19 @@
+.table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: left;
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+    th {
+        vertical-align: bottom;
+        font-weight: normal;
+    }
+
+    td {
+        vertical-align: top;
+    }
+}
