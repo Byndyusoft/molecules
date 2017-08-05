@@ -3,7 +3,7 @@ import cls from 'classnames';
 
 const { bool, node, oneOf, string } = PropTypes;
 
-export default function ({ sizes, styles, themes, variants }) {
+export default function ({ sizes, styles = {}, themes, variants }) {
     const propTypes = {};
 
     if (sizes) {
@@ -22,8 +22,8 @@ export default function ({ sizes, styles, themes, variants }) {
         const { children, className, isDisabled, href, target } = props;
 
         return isDisabled
-            ? <span className={className} role="button">{children}</span>
-            : <a className={className} href={href} role="button" target={target}>{children}</a>;
+            ? <span className={className} role="button">{ children }</span>
+            : <a className={className} href={href} role="button" target={target}>{ children }</a>;
     };
 
     Link.propTypes = {
@@ -46,10 +46,11 @@ export default function ({ sizes, styles, themes, variants }) {
         );
 
         const isDisabled = props.isPending || props.isDisabled;
+        const children = <span>{ props.children }</span>;
 
         return props.href.length !== 0
-            ? <Link onClick={props.onClick} className={classNames} href={props.href} isDisabled={isDisabled}>{ props.children }</Link>
-            : <button type={props.type} onClick={props.onClick} className={classNames} disabled={isDisabled}>{ props.children }</button>;
+            ? <Link onClick={props.onClick} className={classNames} href={props.href} isDisabled={isDisabled}>{ children }</Link>
+            : <button type={props.type} onClick={props.onClick} className={classNames} disabled={isDisabled}>{ children }</button>;
     };
 
     Button.propTypes = {
