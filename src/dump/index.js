@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import { node } from 'prop-types';
 import styles from './index.css';
 
 const Dump = props => {
@@ -8,7 +9,7 @@ const Dump = props => {
 };
 
 Dump.propTypes = {
-    children: PropTypes.node.isRequired
+    children: node.isRequired
 };
 
 export default Dump;

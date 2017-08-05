@@ -1,29 +1,11 @@
 module.exports = {
     module: {
-        loaders: [{
+        rules: [{
             test: /\.css$/,
-            loaders: ['style', 'css?modules&localIdentName=[folder]--[local]__[hash:base64:5]', 'postcss']
+            use: ['style-loader', 'css-loader?modules&localIdentName=[folder]--[local]__[hash:base64:5]', 'postcss-loader']
         }, {
             test: /\.(png|svg)$/,
-            loader: 'file?name=img/[name].[ext]'
+            use: 'file-loader?name=img/[name].[ext]'
         }]
-    },
-
-    resolve: {
-        extensions: ['', '.js', '.jsx']
-    },
-
-    postcss() {
-        /* eslint-disable global-require */
-        return [
-            require('postcss-import'), // Plugin to transform @import rules by inlining content
-            require('postcss-custom-properties'), // Plugin to transform W3C CSS Custom Properties for variables syntax to more compatible CSS
-            require('postcss-calc'), // Plugin to reduce calc()
-            require('postcss-nested'), // Plugin to unwrap nested rules like how Sass does it
-            require('postcss-custom-selectors'), // Plugin to transform W3C CSS Extensions (Custom Selectors) to more compatible CSS
-            require('postcss-color-function'), // Plugin to transform W3C CSS color function to more compatible CSS
-            require('autoprefixer') // Add vendor prefixes to CSS rules using values from caniuse.com
-        ];
-        /* eslint-enable global-require */
     }
 };
