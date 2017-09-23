@@ -25,8 +25,8 @@ body {
     font-size: 100%;
     line-height: 1.5;
     background-image:
-        linear-gradient(45deg, var(--gray-0) 25%, transparent 25%, transparent 75%, var(--gray-0) 75%, var(--gray-0)),
-        linear-gradient(45deg, var(--gray-0) 25%, transparent 25%, transparent 75%, var(--gray-0) 75%, var(--gray-0));
+        linear-gradient(45deg, var(--pink-1) 25%, transparent 25%, transparent 75%, var(--pink-1) 75%, var(--pink-1)),
+        linear-gradient(45deg, var(--pink-1) 25%, transparent 25%, transparent 75%, var(--pink-1) 75%, var(--pink-1));
     background-size: 16px 16px;
     background-position: 0 0, 8px 8px;
 }
