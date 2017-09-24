@@ -2,7 +2,6 @@ import React from 'react';
 import { bool, node, oneOf, string } from 'prop-types';
 import cls from 'classnames';
 
-
 export default function ({ sizes, styles = {}, themes, variants }) {
     const propTypes = {};
 

@@ -20,6 +20,7 @@
     },
     "homepage": "https://github.com/byndyusoft/molecules#readme",
     "devDependencies": {
+        "@storybook/addon-actions": "^3.2.10",
         "@storybook/addon-knobs": "^3.2.0",
         "@storybook/react": "^3.2.3",
         "autoprefixer": "^7.1.2",
@@ -53,9 +54,12 @@
         "sinon": "^3.0.0",
         "style-loader": "^0.18.2",
         "stylelint": "^8.0.0",
-        "stylelint-config-standard": "^17.0.0"
+        "stylelint-config-standard": "^17.0.0",
+        "webpack": "^3.6.0"
     },
     "dependencies": {
+        "autobind-decorator": "^2.1.0",
+        "doremi": "^0.1.1",
         "prop-types": "^15.5.10",
         "react": "^15.6.1",
         "react-dom": "^15.6.1"
