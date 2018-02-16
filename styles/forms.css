@@ -1,0 +1,11 @@
+button,
+input,
+select,
+textarea {
+    outline: none;
+}
+
+/* IE10 */
+::-ms-clear {
+    display: none;
+}

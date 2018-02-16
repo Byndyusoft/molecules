@@ -1,0 +1,27 @@
+@import "../../styles/palette.css";
+@import "../../styles/text-sizes.css";
+
+.field {
+    position: relative;
+
+    & + & {
+        margin-top: 1rem;
+    }
+}
+
+.input {
+    display: block;
+    border: 0;
+    padding: 0.5rem;
+    font-size: var(--text-size-5-font-size);
+    line-height: 1rem;
+}
+
+.error {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: var(--danger-base-color);
+    font-size: var(--text-size-6-font-size);
+    line-height: var(--text-size-6-line-height);
+}

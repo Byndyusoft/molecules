@@ -1,0 +1,15 @@
+@import "../styles/palette.css";
+
+.container {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+    padding: 1rem;
+    background-image:
+        linear-gradient(45deg, var(--pink-1) 25%, transparent 25%, transparent 75%, var(--pink-1) 75%, var(--pink-1)),
+        linear-gradient(45deg, var(--pink-1) 25%, transparent 25%, transparent 75%, var(--pink-1) 75%, var(--pink-1));
+    background-size: 16px 16px;
+    background-position: 0 0, 8px 8px;
+}
